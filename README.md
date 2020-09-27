@@ -8,7 +8,7 @@ On your command line or git terminal
 ```git clone https://github.com/danishalim/URLChecker```
 
 Open the directory and paste the following in the command line
-```npm install``` or ```npm i```
+```npm install``` OR ```npm i```
 
 ## Usage:
 
