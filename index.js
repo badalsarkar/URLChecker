@@ -6,6 +6,8 @@ const chalk = require("chalk");
 const axios = require("axios");
 const version = require("./package.json").version;
 
+
+// Define options, aliases, required arguments and usage message
 const argv = yargs
   .scriptName("urlcheck")
   .usage(chalk.yellow("Usage: $0 [options]"))
@@ -20,6 +22,7 @@ const argv = yargs
 
 let urlList;
 
+// Read the file asynchronously. Convert data to string, match against URL regex and store in urlList
 async function readF() {
   const data = await fs.readFile(argv.file);
 
@@ -29,6 +32,7 @@ async function readF() {
   return urlList;
 }
 
+// Make a head request for each URL asynchronously and print out colored response status code
 async function fetch(urlList) {
   urlList.forEach(async (url) => {
     try {
@@ -53,6 +57,7 @@ async function fetch(urlList) {
   });
 }
 
+// Chain both asynchronous operations
 readF().then((urlList) => {
   fetch(urlList);
 });
