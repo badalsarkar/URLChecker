@@ -1,11 +1,24 @@
 {
   "name": "urlchecker",
   "version": "1.0.0",
-  "description": "Bulk check URL status codes",
+  "description": "Node.js command-line tool to bulk check URL status codes",
   "main": "./index.js",
   "bin": {
     "urlcheck": "./index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danishalim/URLChecker"
+  },
+  "homepage": "https://github.com/danishalim/URLChecker",
+    "bugs": {
+    "url": "https://github.com/danishalim/URLChecker/issuess"
+  },
+  "preferGlobal": true,
+  "keywords": [
+    "check URL",
+    "cli"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
