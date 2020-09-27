@@ -1,0 +1,19 @@
+{
+  "name": "urlchecker",
+  "version": "1.0.0",
+  "description": "Bulk check URL status codes",
+  "main": "./index.js",
+  "bin": {
+    "urlcheck": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Danish Ali Mussa",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "chalk": "^4.1.0",
+    "yargs": "^16.0.3"
+  }
+}
