@@ -16,6 +16,10 @@ Find and check URLs inside file:
 
 ```urlcheck -f filename```
 
+Find and check URLS inside files and test them as https where they are https
+
+```urlcheck -f filename -s```
+
 ## Version information:
 
 ```urlcheck -v```
@@ -30,3 +34,4 @@ Find and check URLs inside file:
 * Links with successful responses are printed in green, 400 and 404 status codes are printed in red; all others (unknown) are printed in grey.
 * Code is optimized to only request headers.
 * Results contain clickable links
+* Test http links as https
