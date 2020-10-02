@@ -11,7 +11,7 @@
     "url": "https://github.com/danishalim/URLChecker"
   },
   "homepage": "https://github.com/danishalim/URLChecker",
-    "bugs": {
+  "bugs": {
     "url": "https://github.com/danishalim/URLChecker/issuess"
   },
   "preferGlobal": true,

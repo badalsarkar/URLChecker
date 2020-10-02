@@ -4,6 +4,7 @@ const fs = require("fs").promises;
 const yargs = require("yargs");
 const chalk = require("chalk");
 const axios = require("axios");
+const { url } = require("inspector");
 const version = require("./package.json").version;
 
 
@@ -15,6 +16,8 @@ const argv = yargs
   .nargs("f", 1)
   .describe("f", "Load a file")
   .demandOption(["f"])
+  .alias("s", "ssl")
+  .describe("s", "Check if http works as https in links, enter after file")
   .help("h")
   .alias("h", "help")
   .version(`${version}`)
@@ -29,6 +32,8 @@ async function readF() {
   const dataString = data.toString();
   urlList = dataString.match(/(http|https)(:\/\/)([\w+\-&@`~#$%^*.=/?:]+)/gi);
 
+  
+
   return urlList;
 }
 
@@ -37,6 +42,11 @@ async function fetch(urlList) {
   urlList.forEach(async (url) => {
     try {
       let urlResponse = await axios.head(url);
+
+    // If ssl argv is input, convert all http to https 
+    if(argv.s) {
+        url = url.replace("http:", "https:");
+    }
 
       if (urlResponse.status == 200) {
         console.log(
