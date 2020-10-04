@@ -1,6 +1,6 @@
 # URLChecker
 
-Node.js command-line tool to bulk check URL status codes
+Node.js command-line tool to bulk-check URL status codes
 
 ## Installation
 
@@ -23,17 +23,17 @@ Find and check URLS inside files and test them as https where they are https
 
 ```urlcheck -f filename -s```
 
-## Version information:
+## Options:
 
+Version information:
 ```urlcheck -v```
 
-## Help:
-
-```urcheck or urlcheck -h```
+Help:
+```urlcheck or urlcheck -h```
 
 ## Features
 
 * The script matches all URLs in a given file and bulk-checks their status codes
 * Links with successful responses are printed in green, 400 and 404 status codes are printed in red; all others (unknown) are printed in grey.
 * Code is optimized to only request headers.
-* Test http links as https
+* Test http links with https protocol
