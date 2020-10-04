@@ -10,6 +10,9 @@ On your command line or git terminal
 Open the directory and paste the following in the command line
 ```npm install``` OR ```npm i```
 
+Type in the following to create a symlink
+```npm link```
+
 ## Usage:
 
 Find and check URLs inside file:
